@@ -1,0 +1,2606 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='cone_1'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.010551 0.002156 0 0 -0 0</pose>
+    </model>
+    <model name='cone_1_clone'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.927785 -1.56996 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_0'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.92909 -1.76638 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_1'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.93496 -2.22266 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_2'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.011624 1.34712 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_3'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.09715 0.932545 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_4'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.43467 0.340706 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_6'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.11922 -2.00252 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_7'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>3.76845 -3.20153 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_8'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.81766 -3.23688 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_9'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>4.45874 -4.35965 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_10'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.98482 -4.56591 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_11'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>4.34773 -5.2134 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_12'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.58119 -6.38956 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_13'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>5.83818 -5.47936 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_14'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>3.68646 -5.96621 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_15'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>4.50985 -7.17835 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_16'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.5173 -6.2488 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_17'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.82608 -7.80886 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_18'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>1.29809 -6.03452 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_20'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.096901 -5.68134 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_21'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.870215 -7.49476 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_22'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-2.77984 -5.70578 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_23'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.14508 -4.60018 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_24'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-3.47069 -3.88115 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_25'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.8366 -6.59466 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_26'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-2.06799 -3.08092 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_27'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.51241 -1.95069 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_28'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-0.731144 -1.59024 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_29'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-3.76027 -2.39739 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_30'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-3.17649 -0.95201 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_31'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-2.53483 0.214098 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_32'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.55587 0.865543 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <model name='cone_1_clone_34'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-3.32221 -4.8059 0.499941 0.000269 0.000357 0.027616</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>945 243000000</sim_time>
+      <real_time>948 83317600</real_time>
+      <wall_time>1509607424 284779424</wall_time>
+      <iterations>945243</iterations>
+      <model name='cone_1'>
+        <pose frame=''>-0.039241 -1.1855 0.499948 0.000226 0.000347 -0.028761</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.039241 -1.1855 0.499948 0.000226 0.000347 -0.028761</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.368915 -0.251911 -0.25235 0.501557 0.742548 0.137912</acceleration>
+          <wrench>0.036892 -0.025191 -0.025235 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone'>
+        <pose frame=''>0.969411 -1.19941 0.499942 0.000368 0.000253 -0.031693</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.969411 -1.19941 0.499942 0.000368 0.000253 -0.031693</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.235762 -0.576582 8.04723 0.810838 1.10576 -2.84638</acceleration>
+          <wrench>0.023576 -0.057658 0.804723 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_0'>
+        <pose frame=''>2.00718 -1.60476 0.499946 0.000328 0.000245 -0.022811</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.00718 -1.60476 0.499946 0.000328 0.000245 -0.022811</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.231113 -0.354006 0.086433 0.708403 0.461393 -0.024095</acceleration>
+          <wrench>0.023111 -0.035401 0.008643 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_1'>
+        <pose frame=''>2.97792 -2.26957 0.499942 0.000237 0.000378 -0.024478</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.97792 -2.26957 0.499942 0.000237 0.000378 -0.024478</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.55938 -0.267567 8.08821 -0.797832 -0.643055 2.76985</acceleration>
+          <wrench>0.055938 -0.026757 0.808821 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_10'>
+        <pose frame=''>7.18191 -4.66866 0.499947 0.000362 0.000257 -0.015597</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.18191 -4.66866 0.499947 0.000362 0.000257 -0.015597</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.00174 -0.056679 -3.08654 0.115595 -0.163126 -3.13163</acceleration>
+          <wrench>0.000174 -0.005668 -0.308654 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_11'>
+        <pose frame=''>4.28345 -5.54835 0.499945 0.000331 0.000307 -0.020982</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>4.28345 -5.54835 0.499945 0.000331 0.000307 -0.020982</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.255547 -0.317988 0.318435 0.635912 0.511188 0.003112</acceleration>
+          <wrench>0.025555 -0.031799 0.031844 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_12'>
+        <pose frame=''>6.47946 -7.26574 0.499947 0.000247 0.000369 -0.017052</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.47946 -7.26574 0.499947 0.000247 0.000369 -0.017052</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.065521 -0.001767 -3.04889 -0.182995 0.133225 -2.77709</acceleration>
+          <wrench>0.006552 -0.000177 -0.304889 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_13'>
+        <pose frame=''>7.04196 -6.0005 0.499945 0.000202 0.000371 -0.021001</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>7.04196 -6.0005 0.499945 0.000202 0.000371 -0.021001</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.660279 -0.288319 -3.13084 0.750493 -1.39438 -1.67295</acceleration>
+          <wrench>-0.066028 -0.028832 -0.313084 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_14'>
+        <pose frame=''>3.39785 -6.25296 0.499941 0.000359 0.000267 -0.017434</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>3.39785 -6.25296 0.499941 0.000359 0.000267 -0.017434</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.232583 -0.55323 8.49863 0.921426 0.940031 3.10804</acceleration>
+          <wrench>0.023258 -0.055323 0.849863 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_15'>
+        <pose frame=''>5.08536 -8.26764 0.499943 0.000222 0.000388 -0.025256</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.08536 -8.26764 0.499943 0.000222 0.000388 -0.025256</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.920984 -0.224731 -3.55486 -3.00248 -1.52432 2.74177</acceleration>
+          <wrench>-0.092098 -0.022473 -0.355486 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_16'>
+        <pose frame=''>2.16278 -6.53065 0.499946 0.000264 0.000358 -0.016715</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.16278 -6.53065 0.499946 0.000264 0.000358 -0.016715</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.524339 -0.305263 -2.76649 0.953571 -1.22847 1.91234</acceleration>
+          <wrench>-0.052434 -0.030526 -0.276649 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_17'>
+        <pose frame=''>3.73303 -8.7319 0.499908 0.000323 0.000313 -0.026379</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>3.73303 -8.7319 0.499908 0.000323 0.000313 -0.026379</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.989429 1.0994 -4.85823 -0.594724 0.216823 3.14067</acceleration>
+          <wrench>-0.098943 0.10994 -0.485823 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_18'>
+        <pose frame=''>0.981142 -6.26886 0.499947 0.000343 0.000171 -0.012419</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.981142 -6.26886 0.499947 0.000343 0.000171 -0.012419</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.197667 -0.377904 -0.615721 0.75811 0.390569 -0.139636</acceleration>
+          <wrench>0.019767 -0.03779 -0.061572 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_19'>
+        <pose frame=''>4.41956 -0.242055 0.499937 0.000346 0.000281 -0.025525</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>4.41956 -0.242055 0.499937 0.000346 0.000281 -0.025525</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.453806 0.575565 -7.34959 -0.80502 -0.260813 3.08735</acceleration>
+          <wrench>-0.045381 0.057556 -0.734959 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_2'>
+        <pose frame=''>-0.03223 1.85501 0.499944 0.000338 0.000296 -0.021319</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.03223 1.85501 0.499944 0.000338 0.000296 -0.021319</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.106924 -0.225831 -0.65989 0.45332 0.210379 -0.101383</acceleration>
+          <wrench>0.010692 -0.022583 -0.065989 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_20'>
+        <pose frame=''>-0.0586 -5.72267 0.499943 0.00021 0.000378 -0.023314</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.0586 -5.72267 0.499943 0.00021 0.000378 -0.023314</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.846615 -0.425933 -0.68992 -2.0637 -1.31484 -0.201331</acceleration>
+          <wrench>-0.084662 -0.042593 -0.068992 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_21'>
+        <pose frame=''>-0.846331 -8.24529 0.499941 0.000264 0.000358 -0.014708</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.846331 -8.24529 0.499941 0.000264 0.000358 -0.014708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.517699 0.400499 -7.61177 0.421059 0.238954 3.11668</acceleration>
+          <wrench>-0.05177 0.04005 -0.761177 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_22'>
+        <pose frame=''>-3.06409 -6.24928 0.499938 0.000247 0.000371 -0.02105</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-3.06409 -6.24928 0.499938 0.000247 0.000371 -0.02105</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.599678 0.423515 -7.34561 0.351165 0.790667 3.13834</acceleration>
+          <wrench>-0.059968 0.042352 -0.734561 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_23'>
+        <pose frame=''>-1.06064 -4.911 0.499941 0.000369 0.00025 -0.015768</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.06064 -4.911 0.499941 0.000369 0.00025 -0.015768</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.363618 0.533566 -7.64155 -1.51203 1.45761 0.938157</acceleration>
+          <wrench>-0.036362 0.053357 -0.764155 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_24'>
+        <pose frame=''>-4.43395 -3.50649 0.499941 0.000254 0.000368 -0.012602</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.43395 -3.50649 0.499941 0.000254 0.000368 -0.012602</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.515364 -0.271734 8.30916 -0.592086 -0.602067 2.79135</acceleration>
+          <wrench>0.051536 -0.027173 0.830916 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_25'>
+        <pose frame=''>-2.11084 -7.40838 0.499942 0.000269 0.000356 -0.011519</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.11084 -7.40838 0.499942 0.000269 0.000356 -0.011519</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.443051 -0.298116 7.29819 -0.416464 -0.292596 2.94633</acceleration>
+          <wrench>0.044305 -0.029812 0.729819 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_26'>
+        <pose frame=''>-1.68532 -4.09422 0.499943 0.000229 0.000303 -0.011226</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.68532 -4.09422 0.499943 0.000229 0.000303 -0.011226</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.376102 -0.364781 0.429218 0.733708 0.743524 -0.252985</acceleration>
+          <wrench>0.03761 -0.036478 0.042922 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_27'>
+        <pose frame=''>-1.65305 -2.21811 0.499946 0.000344 0.000276 -0.014618</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.65305 -2.21811 0.499946 0.000344 0.000276 -0.014618</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.000813 0.193899 -7.97291 2.32747 -1.55664 -1.70991</acceleration>
+          <wrench>8.1e-05 0.01939 -0.797291 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_28'>
+        <pose frame=''>-0.84417 -1.53072 0.499909 0.000339 0.000304 -0.013755</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.84417 -1.53072 0.499909 0.000339 0.000304 -0.013755</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.959843 1.12179 -4.86714 -0.662665 0.126022 -3.13874</acceleration>
+          <wrench>-0.095984 0.112179 -0.486715 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_29'>
+        <pose frame=''>-4.13988 -2.01361 0.499947 0.000243 0.00036 -0.012844</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-4.13988 -2.01361 0.499947 0.000243 0.00036 -0.012844</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.438694 -0.246688 2.44134 0.242364 1.00365 3.02969</acceleration>
+          <wrench>0.043869 -0.024669 0.244134 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_3'>
+        <pose frame=''>1.46185 1.59059 0.499939 0.00027 0.000354 -0.016409</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>1.46185 1.59059 0.499939 0.00027 0.000354 -0.016409</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.543207 0.431241 -7.48125 0.30073 0.474457 -3.1346</acceleration>
+          <wrench>-0.054321 0.043124 -0.748125 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_30'>
+        <pose frame=''>-3.75987 -0.328034 0.499932 0.000258 0.000362 -0.020259</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-3.75987 -0.328034 0.499932 0.000258 0.000362 -0.020259</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.692534 0.521356 -6.90429 1.74377 -1.33967 3.13172</acceleration>
+          <wrench>-0.069253 0.052136 -0.690429 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_31'>
+        <pose frame=''>-2.70528 0.82873 0.499945 0.000318 0.000314 -0.006819</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-2.70528 0.82873 0.499945 0.000318 0.000314 -0.006819</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.272952 -0.365008 0.115418 0.731739 0.542291 -0.105477</acceleration>
+          <wrench>0.027295 -0.036501 0.011542 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_32'>
+        <pose frame=''>-1.62528 1.50014 0.499946 0.000348 0.000284 -0.016531</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.62528 1.50014 0.499946 0.000348 0.000284 -0.016531</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.177092 -0.289386 -0.525995 0.578385 0.354954 0.022778</acceleration>
+          <wrench>0.017709 -0.028939 -0.052599 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_33'>
+        <pose frame=''>-1.98214 -2.98871 0.499938 0.000335 0.000295 -0.028618</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.98214 -2.98871 0.499938 0.000335 0.000295 -0.028618</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.470582 0.555469 -7.3661 -0.665052 -0.105368 3.09853</acceleration>
+          <wrench>-0.047058 0.055547 -0.73661 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_34'>
+        <pose frame=''>-3.85185 -5.02219 0.499942 0.000331 0.0003 -0.008335</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-3.85185 -5.02219 0.499942 0.000331 0.0003 -0.008335</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.321211 -0.387193 7.29226 0.123307 0.23668 -2.93299</acceleration>
+          <wrench>0.032121 -0.038719 0.729226 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_35'>
+        <pose frame=''>2.18761 -9.15157 0.499942 0.000296 0.000334 -0.022625</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>2.18761 -9.15157 0.499942 0.000296 0.000334 -0.022625</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.352513 -0.348898 7.12348 -0.052126 0.089308 3.03583</acceleration>
+          <wrench>0.035251 -0.03489 0.712348 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_36'>
+        <pose frame=''>0.635357 -8.76682 0.499942 0.00027 0.000357 -0.027058</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0.635357 -8.76682 0.499942 0.00027 0.000357 -0.027058</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.497535 -0.352145 7.87231 -0.414324 -0.351006 -3.02573</acceleration>
+          <wrench>0.049754 -0.035214 0.787231 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_4'>
+        <pose frame=''>3.14278 0.814292 0.499944 0.000339 0.000293 -0.016082</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>3.14278 0.814292 0.499944 0.000339 0.000293 -0.016082</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.068289 -0.190428 -1.11468 0.381581 0.135051 -0.044616</acceleration>
+          <wrench>0.006829 -0.019043 -0.111469 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_5'>
+        <pose frame=''>6.37101 -2.06096 0.499947 0.000284 0.000341 -0.02639</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.37101 -2.06096 0.499947 0.000284 0.000341 -0.02639</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.483632 -0.487424 2.68771 2.52388 1.22022 2.03352</acceleration>
+          <wrench>0.048363 -0.048742 0.268771 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_6'>
+        <pose frame=''>5.54947 -1.25744 0.499948 0.000296 0.000306 -0.019628</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>5.54947 -1.25744 0.499948 0.000296 0.000306 -0.019628</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.572941 -0.545286 3.59358 0.446784 -0.673216 2.13455</acceleration>
+          <wrench>0.057294 -0.054529 0.359358 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_7'>
+        <pose frame=''>3.80679 -3.24381 0.499937 0.000257 0.000364 -0.019198</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>3.80679 -3.24381 0.499937 0.000257 0.000364 -0.019198</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.585983 0.441116 -7.34792 0.206307 0.714602 3.13384</acceleration>
+          <wrench>-0.058598 0.044112 -0.734792 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_8'>
+        <pose frame=''>6.92668 -3.31432 0.499946 0.000356 0.000178 -0.021743</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>6.92668 -3.31432 0.499946 0.000356 0.000178 -0.021743</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.199896 -0.480245 2.65349 0.74603 1.40965 2.15358</acceleration>
+          <wrench>0.01999 -0.048024 0.265349 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='cone_1_clone_9'>
+        <pose frame=''>4.50004 -4.40453 0.499939 0.000285 0.000342 -0.022443</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>4.50004 -4.40453 0.499939 0.000285 0.000342 -0.022443</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.514018 0.45548 -7.50392 0.086177 0.277834 3.13591</acceleration>
+          <wrench>-0.051402 0.045548 -0.750392 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='cone_1_clone_35'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>2.16202 -9.1236 0.499941 0.000368 0.000253 0.00699</pose>
+    </model>
+    <model name='cone_1_clone_36'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>0.609056 -8.7384 0.499939 0.00032 0.000295 0.006494</pose>
+    </model>
+    <model name='cone_1_clone_19'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>4.11785 0.674664 0.499947 0.000224 0.00033 -0.004823</pose>
+    </model>
+    <model name='cone_1_clone_5'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>6.36129 -2.05038 0.499945 0.000318 0.000312 -0.01589</pose>
+    </model>
+    <model name='cone_1_clone_33'>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.4</mu>
+                <mu2>0.4</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.0001</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.15</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>-1.98362 -2.98703 0.499947 0.000325 0.000241 -0.026697</pose>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-2.61818 -18.8548 14.3433 0 0.709797 1.47785</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
